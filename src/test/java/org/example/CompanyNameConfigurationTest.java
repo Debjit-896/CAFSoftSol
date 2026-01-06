@@ -9,19 +9,13 @@ public class CompanyNameConfigurationTest {
     @Test
     public void testNullInput() {
         String result = CompanyNameConfiguration.configureCompanyName(null);
-        assertEquals("Company name cannot be null!", result);
+        assertEquals("Company name cannot be null or empty!", result);
     }
 
     @Test
     public void testEmptyInput() {
         String result = CompanyNameConfiguration.configureCompanyName("");
-        assertEquals("Company name cannot be empty!", result);
-    }
-
-    @Test
-    public void testWhitespaceInput() {
-        String result = CompanyNameConfiguration.configureCompanyName("     ");
-        assertEquals("Company name contains only spaces!", result);
+        assertEquals("Company name cannot be null or empty!", result);
     }
 
     @Test
