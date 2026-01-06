@@ -13,10 +13,6 @@ public class CompanyNameConfiguration {
                 .trim()
                 .replaceAll("\\s+", " ");
 
-//        return switch (value) {
-//            case "caf softsol", "caf solution", "caf softsolution india pvt limited" -> "CAF SoftSol India Pvt Ltd.";
-//            default -> "Invalid Company Name!";
-
         switch (value) {
             case "caf softsol":
             case "caf solution":
