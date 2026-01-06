@@ -4,7 +4,7 @@ public class CompanyNameConfiguration {
     public static String configureCompanyName (String name) {
 
         // NULL input handling
-        if (name == null || name.isEmpty()) {
+        if (name == null || name.trim().isEmpty()) {
             return "Company name cannot be null or empty!";
         }
 
@@ -22,5 +22,16 @@ public class CompanyNameConfiguration {
             default:
                 return "Invalid Company Name!";
         }
+    }
+
+    public static String configureCompanyName (String[] name) {
+        if(name.length>0){
+            for(int i=0;i<name.length;i++){
+                configureCompanyName(name[i]);
+            }
+        }else{
+            return "Please enter input";
+        }
+        return null;
     }
 }
