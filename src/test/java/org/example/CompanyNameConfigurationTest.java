@@ -13,6 +13,12 @@ public class CompanyNameConfigurationTest {
     }
 
     @Test
+    public void testEmptyArray() {
+        String result = CompanyNameConfiguration.configureCompanyName(new String[]{});
+        assertEquals("Please enter input", result);
+    }
+
+    @Test
     public void testEmptyInput() {
         String result = CompanyNameConfiguration.configureCompanyName("");
         assertEquals("Company name cannot be null or empty!", result);
